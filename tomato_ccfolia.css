@@ -249,9 +249,28 @@ img[src*="dice"] {
 /**************************
 発言時キャラクター（追加）
 **************************/
-[class*="CharacterIcon"], 
+/** キャラクターアイコンの配置調整 */
+.MuiListItem-root {
+  display: flex !important; /* 横並びにする */
+  align-items: center !important; /* 上下中央に揃える */
+  flex-direction: row !important; /* 左から右へ並べる */
+}
+
+.MuiListItemAvatar-root {
+  display: block !important;
+  margin-right: 15px !important; /* アイコンと文字の間の隙間 */
+  margin-left: 10px !important;  /* 左端の余白 */
+  position: static !important;   /* 重なりを解除して並びに加える */
+}
+
 .MuiAvatar-root {
-  /* ここは「none」ではなく、もし表示したいなら「block」にする */
-  display: block !important; 
-  /* 必要ならここで位置や大きさを調整 */
+  width: 60px !important;  /* アイコンのサイズ（お好みで調整） */
+  height: 60px !important;
+  position: static !important;
+}
+
+/** 文字部分の重なりを解消 */
+.MuiListItemText-root {
+  position: static !important;
+  margin: 0 !important;
 }
