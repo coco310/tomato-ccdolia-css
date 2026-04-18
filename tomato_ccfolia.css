@@ -118,7 +118,9 @@ body {
 /** 監視モード注釈の削除 */
 .MuiSnackbar-root,
 /** 発言時キャラクター */
-
+.eifEaS {
+  display: none !important;
+}
 
 /** 広告の削除 */
 .MuiDialog-root {
