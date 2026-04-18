@@ -118,10 +118,7 @@ body {
 /** 監視モード注釈の削除 */
 .MuiSnackbar-root,
 /** 発言時キャラクター */
-[class*="CharacterIcon"], 
-.MuiAvatar-root {
-  display: none !important;
-}
+
 
 /** 広告の削除 */
 .MuiDialog-root {
@@ -247,4 +244,14 @@ img[src*="dice"] {
 /** スクロールバーの削除 */
 .MuiPaper-rounded > div > div:last-child::-webkit-scrollbar {
   display: none !important;
+}
+
+/**************************
+発言時キャラクター（追加）
+**************************/
+[class*="CharacterIcon"], 
+.MuiAvatar-root {
+  /* ここは「none」ではなく、もし表示したいなら「block」にする */
+  display: block !important; 
+  /* 必要ならここで位置や大きさを調整 */
 }
